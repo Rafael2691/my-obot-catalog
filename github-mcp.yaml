@@ -1,13 +1,10 @@
 name: GitHub MCP
-shortDescription: Репозиторії, Issues, PR та код на GitHub
-description: 'Репозиторії, Issues, PR та код на GitHub
-
-
-  Джерело: https://github.com/topics/github-mcp'
+shortDescription: Управління репозиторіями та кодом GitHub
+description: Управління репозиторіями та кодом GitHub
 metadata:
   categories: Developer Tools
   icon: ''
-  repoURL: https://github.com/topics/github-mcp
+  repoURL: https://github.com/topics/mcp-server
 runtime: containerized
 containerizedConfig:
   image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
@@ -17,3 +14,10 @@ containerizedConfig:
   - npx
   - -y
   - '@modelcontextprotocol/server-github'
+config:
+- key: GITHUB_PERSONAL_ACCESS_TOKEN
+  name: GitHub Personal Access Token
+  required: true
+  sensitive: true
+  usage: env
+  description: Персональний токен GitHub

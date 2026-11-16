@@ -1,13 +1,10 @@
 name: Brave Search MCP
-shortDescription: Пошук в інтернеті через Brave Search API
-description: 'Пошук в інтернеті через Brave Search API
-
-
-  Джерело: https://github.com/topics/brave-search-mcp'
+shortDescription: Пошук в мережі Інтернет через Brave API
+description: Пошук в мережі Інтернет через Brave API
 metadata:
   categories: Search & Retrieval
   icon: ''
-  repoURL: https://github.com/topics/brave-search-mcp
+  repoURL: https://github.com/topics/mcp-server
 runtime: containerized
 containerizedConfig:
   image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
@@ -17,3 +14,10 @@ containerizedConfig:
   - npx
   - -y
   - '@modelcontextprotocol/server-brave-search'
+config:
+- key: BRAVE_API_KEY
+  name: Brave API Key
+  required: true
+  sensitive: true
+  usage: env
+  description: Ключ доступу Brave Search API
