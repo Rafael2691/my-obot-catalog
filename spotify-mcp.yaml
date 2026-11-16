@@ -1,12 +1,9 @@
 name: Spotify MCP
 shortDescription: Управління відтворенням, треками та плейлистами Spotify
-description: 'Управління відтворенням, треками та плейлистами Spotify
-
-
-  Джерело: https://github.com/topics/spotify-mcp'
+description: Інтеграція зі Spotify API. Потрібні Client ID та Client Secret.
 metadata:
   categories: Media & Audio
-  icon: ''
+  icon: https://open.spotifycdn.com/cdn/images/favicon.54780344.ico
   repoURL: https://github.com/topics/spotify-mcp
 runtime: containerized
 containerizedConfig:
@@ -14,6 +11,17 @@ containerizedConfig:
   port: 8099
   path: /
   args:
-  - npx
-  - -y
-  - '@spotify/mcp'
+    - npx
+    - -y
+    - spotify-mcp-server
+config:
+  - key: SPOTIFY_CLIENT_ID
+    name: Spotify Client ID
+    required: true
+    sensitive: true
+    description: Введіть ваші Client ID з Spotify Developer Dashboard
+  - key: SPOTIFY_CLIENT_SECRET
+    name: Spotify Client Secret
+    required: true
+    sensitive: true
+    description: Введіть ваш Client Secret з Spotify Developer Dashboard
