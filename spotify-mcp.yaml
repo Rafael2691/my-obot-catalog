@@ -1,6 +1,6 @@
 name: Spotify MCP
 shortDescription: Управління відтворенням, треками та плейлистами Spotify
-description: Інтеграція зі Spotify API. Потрібні Client ID та Client Secret.
+description: Інтеграція зі Spotify API через OAuth Refresh Token.
 metadata:
   categories: Media & Audio
   icon: https://open.spotifycdn.com/cdn/images/favicon.54780344.ico
@@ -13,15 +13,20 @@ containerizedConfig:
   args:
     - npx
     - -y
-    - spotify-mcp-server
+    - "@spotify/mcp"
 config:
   - key: SPOTIFY_CLIENT_ID
     name: Spotify Client ID
     required: true
     sensitive: true
-    description: Введіть ваші Client ID з Spotify Developer Dashboard
+    description: Введіть Client ID (ad17ac24a6e5469a8705f3fac7d3837b)
   - key: SPOTIFY_CLIENT_SECRET
     name: Spotify Client Secret
     required: true
     sensitive: true
-    description: Введіть ваш Client Secret з Spotify Developer Dashboard
+    description: Введіть Client Secret (59616ed043da4b6ba652a9e2f686088a)
+  - key: SPOTIFY_REFRESH_TOKEN
+    name: Spotify Refresh Token
+    required: true
+    sensitive: true
+    description: Введіть отриманий Refresh Token
