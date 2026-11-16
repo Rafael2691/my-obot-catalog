@@ -1,0 +1,19 @@
+name: Mcp Server
+shortDescription: MCP server for building and managing Clipform video forms
+description: 'MCP server for building and managing Clipform video forms
+
+
+  Джерело: https://github.com/clipform/mcp-server.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: https://github.com/clipform/mcp-server.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@clipform/mcp-server'

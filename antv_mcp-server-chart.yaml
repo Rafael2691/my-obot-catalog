@@ -1,0 +1,22 @@
+name: Mcp Server Chart
+shortDescription: A Model Context Protocol server for generating charts using AntV.
+  This is a TypeScript-based MCP server that provides ch
+description: 'A Model Context Protocol server for generating charts using AntV. This
+  is a TypeScript-based MCP server that provides chart generation capabilities. It
+  allows you to create various types of charts through MCP tools.
+
+
+  Джерело: git+https://github.com/antvis/mcp-server-chart.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/antvis/mcp-server-chart.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@antv/mcp-server-chart'

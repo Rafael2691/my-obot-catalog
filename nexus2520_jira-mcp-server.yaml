@@ -1,0 +1,19 @@
+name: Jira Mcp Server
+shortDescription: MCP server for Jira API integration - supports Jira Cloud
+description: 'MCP server for Jira API integration - supports Jira Cloud
+
+
+  Джерело: git+https://github.com/pdogra1299/jira-mcp-server.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/pdogra1299/jira-mcp-server.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@nexus2520/jira-mcp-server'

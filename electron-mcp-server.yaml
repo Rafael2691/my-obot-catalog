@@ -1,0 +1,21 @@
+name: Electron Mcp Server
+shortDescription: MCP server for Electron application automation and management. See
+  MCP_USAGE_GUIDE.md for proper argument structure exam
+description: 'MCP server for Electron application automation and management. See MCP_USAGE_GUIDE.md
+  for proper argument structure examples.
+
+
+  Джерело: git+https://github.com/halilural/electron-mcp-server.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/halilural/electron-mcp-server.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - electron-mcp-server

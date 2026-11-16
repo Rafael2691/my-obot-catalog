@@ -1,0 +1,19 @@
+name: Mcp Server
+shortDescription: Heroku Platform MCP Server
+description: 'Heroku Platform MCP Server
+
+
+  Джерело: git+https://github.com/heroku/heroku-mcp-server.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/heroku/heroku-mcp-server.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@heroku/mcp-server'

@@ -1,0 +1,19 @@
+name: Bugsnag Mcp Server
+shortDescription: A Bugsnag MCP server for interacting with Bugsnag API
+description: 'A Bugsnag MCP server for interacting with Bugsnag API
+
+
+  Джерело: git+https://github.com/yourusername/bugsnag-mcp.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/yourusername/bugsnag-mcp.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - bugsnag-mcp-server

@@ -1,0 +1,19 @@
+name: Pl Mcp Server
+shortDescription: MCP server for Platforma Desktop
+description: 'MCP server for Platforma Desktop
+
+
+  Джерело: git+https://github.com/milaboratory/platforma.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/milaboratory/platforma.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@milaboratories/pl-mcp-server'

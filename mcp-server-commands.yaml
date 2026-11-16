@@ -1,0 +1,19 @@
+name: Mcp Server Commands
+shortDescription: An MCP server to run arbitrary commands
+description: 'An MCP server to run arbitrary commands
+
+
+  Джерело: https://www.npmjs.com/package/mcp-server-commands'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: https://www.npmjs.com/package/mcp-server-commands
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - mcp-server-commands

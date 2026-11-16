@@ -1,0 +1,19 @@
+name: Mcp Server Cloudflare
+shortDescription: MCP server for interacting with Cloudflare API
+description: 'MCP server for interacting with Cloudflare API
+
+
+  Джерело: https://www.npmjs.com/package/@cloudflare/mcp-server-cloudflare'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: https://www.npmjs.com/package/@cloudflare/mcp-server-cloudflare
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@cloudflare/mcp-server-cloudflare'

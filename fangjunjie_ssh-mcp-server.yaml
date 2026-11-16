@@ -1,0 +1,19 @@
+name: Ssh Mcp Server
+shortDescription: SSH-based MCP Server (基于 SSH 的 MCP 服务器)
+description: 'SSH-based MCP Server (基于 SSH 的 MCP 服务器)
+
+
+  Джерело: git+https://github.com/classfang/ssh-mcp-server.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/classfang/ssh-mcp-server.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@fangjunjie/ssh-mcp-server'

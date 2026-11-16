@@ -1,0 +1,19 @@
+name: Kubernetes Mcp Server Darwin Arm64
+shortDescription: Model Context Protocol (MCP) server for Kubernetes and OpenShift
+description: 'Model Context Protocol (MCP) server for Kubernetes and OpenShift
+
+
+  Джерело: git+https://github.com/containers/kubernetes-mcp-server.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/containers/kubernetes-mcp-server.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - kubernetes-mcp-server-darwin-arm64

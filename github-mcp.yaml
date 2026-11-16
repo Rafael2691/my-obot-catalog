@@ -1,0 +1,19 @@
+name: GitHub MCP
+shortDescription: Репозиторії, Issues, PR та код на GitHub
+description: 'Репозиторії, Issues, PR та код на GitHub
+
+
+  Джерело: https://github.com/topics/github-mcp'
+metadata:
+  categories: Developer Tools
+  icon: ''
+  repoURL: https://github.com/topics/github-mcp
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@modelcontextprotocol/server-github'

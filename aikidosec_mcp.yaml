@@ -1,0 +1,19 @@
+name: Mcp
+shortDescription: Aikido MCP server
+description: 'Aikido MCP server
+
+
+  Джерело: https://www.npmjs.com/package/@aikidosec/mcp'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: https://www.npmjs.com/package/@aikidosec/mcp
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@aikidosec/mcp'

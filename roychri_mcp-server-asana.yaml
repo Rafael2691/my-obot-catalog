@@ -1,0 +1,19 @@
+name: Mcp Server Asana
+shortDescription: MCP Server for Asana
+description: 'MCP Server for Asana
+
+
+  Джерело: git+https://github.com/roychri/mcp-server-asana.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/roychri/mcp-server-asana.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@roychri/mcp-server-asana'

@@ -1,0 +1,20 @@
+name: Mcp Server
+shortDescription: Verified npm launcher for the open-source ContextStream Rust MCP
+  server
+description: 'Verified npm launcher for the open-source ContextStream Rust MCP server
+
+
+  Джерело: git+https://github.com/contextstream/mcp-server.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/contextstream/mcp-server.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@contextstream/mcp-server'

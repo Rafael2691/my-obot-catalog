@@ -1,0 +1,20 @@
+name: Tiny Stdio Mcp Server
+shortDescription: Minimal MCP server over stdio with typed tools and rich content
+  helpers
+description: 'Minimal MCP server over stdio with typed tools and rich content helpers
+
+
+  Джерело: git+https://github.com/poe-platform/poe-code.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/poe-platform/poe-code.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - tiny-stdio-mcp-server

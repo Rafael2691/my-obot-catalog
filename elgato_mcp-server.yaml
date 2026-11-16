@@ -1,0 +1,21 @@
+name: Mcp Server
+shortDescription: A Model Context Protocol (MCP) server that bridges AI assistants
+  with Elgato apps.
+description: 'A Model Context Protocol (MCP) server that bridges AI assistants with
+  Elgato apps.
+
+
+  Джерело: git+https://github.com/elgatosf/elgato-mcp-server.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/elgatosf/elgato-mcp-server.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@elgato/mcp-server'

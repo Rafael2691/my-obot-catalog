@@ -1,0 +1,21 @@
+name: Mcp
+shortDescription: MCP server that serves knowledge about your components based on
+  your Storybook stories and documentation
+description: 'MCP server that serves knowledge about your components based on your
+  Storybook stories and documentation
+
+
+  Джерело: https://github.com/storybookjs/storybook.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: https://github.com/storybookjs/storybook.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@storybook/mcp'

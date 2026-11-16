@@ -1,0 +1,20 @@
+name: Mcp Server
+shortDescription: 'MCP server for Clipwright: generate UGC videos from your coding
+  agent'
+description: 'MCP server for Clipwright: generate UGC videos from your coding agent
+
+
+  Джерело: git+https://github.com/seocombat/clipwright-mcp.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/seocombat/clipwright-mcp.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@clipwright/mcp-server'

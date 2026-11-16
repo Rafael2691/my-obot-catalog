@@ -1,0 +1,19 @@
+name: Mcp Server
+shortDescription: MCP server for secure AI agent access to Raytio user data
+description: 'MCP server for secure AI agent access to Raytio user data
+
+
+  Джерело: https://www.npmjs.com/package/@raytio/mcp-server'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: https://www.npmjs.com/package/@raytio/mcp-server
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@raytio/mcp-server'

@@ -1,0 +1,19 @@
+name: Spotify MCP
+shortDescription: Управління відтворенням, треками та плейлистами Spotify
+description: 'Управління відтворенням, треками та плейлистами Spotify
+
+
+  Джерело: https://github.com/topics/spotify-mcp'
+metadata:
+  categories: Media & Audio
+  icon: ''
+  repoURL: https://github.com/topics/spotify-mcp
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@spotify/mcp'

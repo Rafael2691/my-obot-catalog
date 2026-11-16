@@ -1,0 +1,19 @@
+name: Mcp Server
+shortDescription: MCP server for Mantine documentation
+description: 'MCP server for Mantine documentation
+
+
+  Джерело: git+https://github.com/mantinedev/mantine.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/mantinedev/mantine.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@mantine/mcp-server'

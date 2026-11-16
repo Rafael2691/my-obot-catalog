@@ -1,0 +1,19 @@
+name: Zapier Sdk Mcp
+shortDescription: MCP server for Zapier SDK
+description: 'MCP server for Zapier SDK
+
+
+  Джерело: https://gitlab.com/zapier/zapier-sdk/zapier-sdk.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: https://gitlab.com/zapier/zapier-sdk/zapier-sdk.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@zapier/zapier-sdk-mcp'

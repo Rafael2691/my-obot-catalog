@@ -1,0 +1,19 @@
+name: Variflight Mcp
+shortDescription: Variflight MCP Server
+description: 'Variflight MCP Server
+
+
+  Джерело: https://www.npmjs.com/package/@variflight-ai/variflight-mcp'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: https://www.npmjs.com/package/@variflight-ai/variflight-mcp
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@variflight-ai/variflight-mcp'

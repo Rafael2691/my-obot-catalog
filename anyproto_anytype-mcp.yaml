@@ -1,0 +1,19 @@
+name: Anytype Mcp
+shortDescription: Official MCP server for Anytype API
+description: 'Official MCP server for Anytype API
+
+
+  Джерело: git+https://github.com/anyproto/anytype-mcp.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/anyproto/anytype-mcp.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@anyproto/anytype-mcp'

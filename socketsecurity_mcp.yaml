@@ -1,0 +1,19 @@
+name: Mcp
+shortDescription: Socket MCP server for scanning dependencies
+description: 'Socket MCP server for scanning dependencies
+
+
+  Джерело: git+https://github.com/SocketDev/socket-mcp.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/SocketDev/socket-mcp.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@socketsecurity/mcp'

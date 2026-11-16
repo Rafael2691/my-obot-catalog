@@ -1,0 +1,19 @@
+name: Mcp Server
+shortDescription: BrowserStack's Official MCP Server
+description: 'BrowserStack''s Official MCP Server
+
+
+  Джерело: git+https://github.com/browserstack/mcp-server.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/browserstack/mcp-server.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@browserstack/mcp-server'

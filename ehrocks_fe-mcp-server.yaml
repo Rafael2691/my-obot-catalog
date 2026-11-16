@@ -1,0 +1,19 @@
+name: Fe Mcp Server
+shortDescription: MCP server for searching Hero Design System components
+description: 'MCP server for searching Hero Design System components
+
+
+  Джерело: git+https://github.com/thinkei/fe-mcp-service.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/thinkei/fe-mcp-service.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@ehrocks/fe-mcp-server'

@@ -1,0 +1,21 @@
+name: Mcp Server Mysql
+shortDescription: MCP server for interacting with MySQL databases with write operations
+  support
+description: 'MCP server for interacting with MySQL databases with write operations
+  support
+
+
+  Джерело: git+https://github.com/benborla/mcp-server-mysql.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/benborla/mcp-server-mysql.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@benborla29/mcp-server-mysql'

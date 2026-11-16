@@ -1,0 +1,19 @@
+name: Mcp Server
+shortDescription: Transloadit MCP server
+description: 'Transloadit MCP server
+
+
+  Джерело: git+https://github.com/transloadit/node-sdk.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/transloadit/node-sdk.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@transloadit/mcp-server'

@@ -1,0 +1,19 @@
+name: Discord MCP
+shortDescription: Читання та відправка повідомлень у Discord
+description: 'Читання та відправка повідомлень у Discord
+
+
+  Джерело: https://github.com/topics/discord-mcp'
+metadata:
+  categories: Communication
+  icon: ''
+  repoURL: https://github.com/topics/discord-mcp
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@modelcontextprotocol/server-discord'

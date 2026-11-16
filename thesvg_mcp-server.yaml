@@ -1,0 +1,19 @@
+name: Mcp Server
+shortDescription: MCP server for searching and fetching 6,500+ brand SVGs from thesvg.org
+description: 'MCP server for searching and fetching 6,500+ brand SVGs from thesvg.org
+
+
+  Джерело: git+https://github.com/glincker/thesvg.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/glincker/thesvg.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@thesvg/mcp-server'

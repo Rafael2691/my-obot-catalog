@@ -1,0 +1,22 @@
+name: Postman Mcp Server
+shortDescription: Postman MCP Server — connect AI agents (Claude Code, Cursor, VS
+  Code Copilot, Gemini CLI) to your Postman collections, s
+description: 'Postman MCP Server — connect AI agents (Claude Code, Cursor, VS Code
+  Copilot, Gemini CLI) to your Postman collections, specifications, and environments
+  via Model Context Protocol (MCP)
+
+
+  Джерело: git+https://github.com/postmanlabs/postman-mcp-server.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/postmanlabs/postman-mcp-server.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@postman/postman-mcp-server'

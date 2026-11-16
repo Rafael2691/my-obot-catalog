@@ -1,0 +1,21 @@
+name: Mcp Server
+shortDescription: Typeroll CMS MCP server – connect AI agents to the REST API to manage
+  content and publish static websites.
+description: 'Typeroll CMS MCP server – connect AI agents to the REST API to manage
+  content and publish static websites.
+
+
+  Джерело: git+https://github.com/Typeroll/typeroll.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/Typeroll/typeroll.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@typeroll/mcp-server'

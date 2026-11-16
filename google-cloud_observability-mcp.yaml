@@ -1,0 +1,21 @@
+name: Observability Mcp
+shortDescription: MCP Server for GCP environment for interacting with various Observability
+  APIs.
+description: 'MCP Server for GCP environment for interacting with various Observability
+  APIs.
+
+
+  Джерело: git+https://github.com/googleapis/gcloud-mcp.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/googleapis/gcloud-mcp.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@google-cloud/observability-mcp'

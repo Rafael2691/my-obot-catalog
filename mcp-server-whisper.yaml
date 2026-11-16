@@ -1,0 +1,19 @@
+name: Mcp Server Whisper
+shortDescription: MCP server for whisper integration
+description: 'MCP server for whisper integration
+
+
+  Джерело: git+https://github.com/hlos-ai/mcp-servers.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/hlos-ai/mcp-servers.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - mcp-server-whisper

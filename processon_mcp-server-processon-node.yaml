@@ -1,0 +1,19 @@
+name: Mcp Server Processon Node
+shortDescription: ProcessOn MCP Server - create mind maps from markdown
+description: 'ProcessOn MCP Server - create mind maps from markdown
+
+
+  Джерело: https://www.npmjs.com/package/@processon/mcp-server-processon-node'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: https://www.npmjs.com/package/@processon/mcp-server-processon-node
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@processon/mcp-server-processon-node'

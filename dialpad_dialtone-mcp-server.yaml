@@ -1,0 +1,19 @@
+name: Dialtone Mcp Server
+shortDescription: MCP Server for Dialtone Design System
+description: 'MCP Server for Dialtone Design System
+
+
+  Джерело: https://github.com/dialpad/dialtone.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: https://github.com/dialpad/dialtone.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@dialpad/dialtone-mcp-server'

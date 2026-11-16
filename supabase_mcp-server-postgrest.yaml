@@ -1,0 +1,19 @@
+name: Mcp Server Postgrest
+shortDescription: MCP server for PostgREST
+description: 'MCP server for PostgREST
+
+
+  Джерело: git+https://github.com/supabase/mcp.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/supabase/mcp.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@supabase/mcp-server-postgrest'

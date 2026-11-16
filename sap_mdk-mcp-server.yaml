@@ -1,0 +1,21 @@
+name: Mdk Mcp Server
+shortDescription: Model Context Protocol (MCP) server for AI-assisted development
+  of MDK applications.
+description: 'Model Context Protocol (MCP) server for AI-assisted development of MDK
+  applications.
+
+
+  Джерело: git+https://github.com/SAP/mdk-mcp-server.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/SAP/mdk-mcp-server.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@sap/mdk-mcp-server'

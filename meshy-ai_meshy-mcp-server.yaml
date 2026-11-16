@@ -1,0 +1,19 @@
+name: Meshy Mcp Server
+shortDescription: MCP server for Meshy AI 3D generation platform
+description: 'MCP server for Meshy AI 3D generation platform
+
+
+  Джерело: git+https://github.com/meshy-dev/meshy-mcp-server.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/meshy-dev/meshy-mcp-server.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@meshy-ai/meshy-mcp-server'

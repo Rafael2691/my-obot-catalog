@@ -1,0 +1,19 @@
+name: Langsmith Mcp Server
+shortDescription: LangSmith MCP Server - TypeScript implementation
+description: 'LangSmith MCP Server - TypeScript implementation
+
+
+  Джерело: https://www.npmjs.com/package/langsmith-mcp-server'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: https://www.npmjs.com/package/langsmith-mcp-server
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - langsmith-mcp-server

@@ -1,0 +1,19 @@
+name: Gitlab Mcp
+shortDescription: Advanced GitLab MCP server
+description: 'Advanced GitLab MCP server
+
+
+  Джерело: git+https://github.com/structured-world/gitlab-mcp.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/structured-world/gitlab-mcp.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@structured-world/gitlab-mcp'

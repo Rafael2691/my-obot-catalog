@@ -1,0 +1,19 @@
+name: Gezhe Mcp Server
+shortDescription: gezhe ppt mcp server
+description: 'gezhe ppt mcp server
+
+
+  Джерело: https://www.npmjs.com/package/gezhe-mcp-server'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: https://www.npmjs.com/package/gezhe-mcp-server
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - gezhe-mcp-server

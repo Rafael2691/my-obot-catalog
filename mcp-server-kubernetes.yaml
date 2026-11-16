@@ -1,0 +1,19 @@
+name: Mcp Server Kubernetes
+shortDescription: MCP server for interacting with Kubernetes clusters via kubectl
+description: 'MCP server for interacting with Kubernetes clusters via kubectl
+
+
+  Джерело: git+https://github.com/Flux159/mcp-server-kubernetes.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/Flux159/mcp-server-kubernetes.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - mcp-server-kubernetes

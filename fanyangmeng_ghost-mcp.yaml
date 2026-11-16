@@ -1,0 +1,19 @@
+name: Ghost Mcp
+shortDescription: MCP server for using the Ghost API
+description: 'MCP server for using the Ghost API
+
+
+  Джерело: https://www.npmjs.com/package/@fanyangmeng/ghost-mcp'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: https://www.npmjs.com/package/@fanyangmeng/ghost-mcp
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@fanyangmeng/ghost-mcp'

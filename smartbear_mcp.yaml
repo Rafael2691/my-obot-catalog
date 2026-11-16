@@ -1,0 +1,19 @@
+name: Mcp
+shortDescription: MCP server for interacting SmartBear Products
+description: 'MCP server for interacting SmartBear Products
+
+
+  Джерело: git+https://github.com/SmartBear/smartbear-mcp.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/SmartBear/smartbear-mcp.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@smartbear/mcp'

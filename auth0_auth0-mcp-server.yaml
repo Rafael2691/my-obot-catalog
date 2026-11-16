@@ -1,0 +1,23 @@
+name: Auth0 Mcp Server
+shortDescription: Auth0 Model Context Protocol (MCP) Server (Beta) — A secure and
+  extendable implementation of an MCP server that provides
+description: 'Auth0 Model Context Protocol (MCP) Server (Beta) — A secure and extendable
+  implementation of an MCP server that provides AI assistants with controlled access
+  to the Auth0 Management API through natural language. This project is in beta and
+  not intended fo
+
+
+  Джерело: git+https://github.com/auth0/auth0-mcp-server.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/auth0/auth0-mcp-server.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@auth0/auth0-mcp-server'

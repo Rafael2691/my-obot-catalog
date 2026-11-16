@@ -1,0 +1,19 @@
+name: Learndash Mcp Server
+shortDescription: A LearnDash MCP Server implementation
+description: 'A LearnDash MCP Server implementation
+
+
+  Джерело: git+https://github.com/stellarwp/learndash-mcp-server.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/stellarwp/learndash-mcp-server.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@stellarwp/learndash-mcp-server'

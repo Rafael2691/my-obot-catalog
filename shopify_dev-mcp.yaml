@@ -1,0 +1,19 @@
+name: Dev Mcp
+shortDescription: A command line tool for setting up Shopify Dev MCP server
+description: 'A command line tool for setting up Shopify Dev MCP server
+
+
+  Джерело: https://www.npmjs.com/package/@shopify/dev-mcp'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: https://www.npmjs.com/package/@shopify/dev-mcp
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@shopify/dev-mcp'

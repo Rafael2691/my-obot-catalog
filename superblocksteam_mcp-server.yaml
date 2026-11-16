@@ -1,0 +1,19 @@
+name: Mcp Server
+shortDescription: Superblocks MCP server
+description: 'Superblocks MCP server
+
+
+  Джерело: https://www.npmjs.com/package/@superblocksteam/mcp-server'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: https://www.npmjs.com/package/@superblocksteam/mcp-server
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@superblocksteam/mcp-server'

@@ -1,0 +1,19 @@
+name: Mcp Server Assessment
+shortDescription: Transcend MCP Server — Assessments tools.
+description: 'Transcend MCP Server — Assessments tools.
+
+
+  Джерело: git+https://github.com/transcend-io/tools.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/transcend-io/tools.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@transcend-io/mcp-server-assessment'

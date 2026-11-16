@@ -1,0 +1,19 @@
+name: Mcp Server Diff
+shortDescription: Diff MCP server public interfaces - CLI tool and GitHub Action
+description: 'Diff MCP server public interfaces - CLI tool and GitHub Action
+
+
+  Джерело: git+https://github.com/SamMorrowDrums/mcp-server-diff.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/SamMorrowDrums/mcp-server-diff.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - mcp-server-diff

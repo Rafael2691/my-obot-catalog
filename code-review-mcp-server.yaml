@@ -1,0 +1,19 @@
+name: Code Review Mcp Server
+shortDescription: MCP Server with Code Review
+description: 'MCP Server with Code Review
+
+
+  Джерело: git+https://github.com/Orcus2021/code-review-mcp-server.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/Orcus2021/code-review-mcp-server.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - code-review-mcp-server

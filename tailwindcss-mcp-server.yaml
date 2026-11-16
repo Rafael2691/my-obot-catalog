@@ -1,0 +1,21 @@
+name: Tailwindcss Mcp Server
+shortDescription: MCP server for TailwindCSS utility classes, documentation, and project
+  assistance
+description: 'MCP server for TailwindCSS utility classes, documentation, and project
+  assistance
+
+
+  Джерело: git+https://github.com/CarbonoDev/tailwindcss-mcp-server.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/CarbonoDev/tailwindcss-mcp-server.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - tailwindcss-mcp-server

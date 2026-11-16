@@ -1,0 +1,19 @@
+name: Mcp
+shortDescription: Currents MCP server
+description: 'Currents MCP server
+
+
+  Джерело: git+https://github.com/currents-dev/currents-mcp.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/currents-dev/currents-mcp.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@currents/mcp'

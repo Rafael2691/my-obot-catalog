@@ -1,0 +1,19 @@
+name: Mcp
+shortDescription: MCP server for Panda CSS AI assistants
+description: 'MCP server for Panda CSS AI assistants
+
+
+  Джерело: git+https://github.com/chakra-ui/panda.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/chakra-ui/panda.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@pandacss/mcp'

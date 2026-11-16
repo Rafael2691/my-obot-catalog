@@ -1,0 +1,19 @@
+name: Mcp Server Salesforce
+shortDescription: A Salesforce connector MCP Server.
+description: 'A Salesforce connector MCP Server.
+
+
+  Джерело: git+https://github.com/tsmztech/mcp-server-salesforce.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/tsmztech/mcp-server-salesforce.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@tsmztech/mcp-server-salesforce'

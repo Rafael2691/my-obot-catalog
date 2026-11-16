@@ -1,0 +1,19 @@
+name: Wikipedia Mcp
+shortDescription: MCP server for Wikipedia
+description: 'MCP server for Wikipedia
+
+
+  Джерело: https://www.npmjs.com/package/wikipedia-mcp'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: https://www.npmjs.com/package/wikipedia-mcp
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - wikipedia-mcp

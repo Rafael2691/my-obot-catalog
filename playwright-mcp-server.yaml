@@ -1,0 +1,19 @@
+name: Playwright Mcp Server
+shortDescription: MCP server for generating Playwright tests
+description: 'MCP server for generating Playwright tests
+
+
+  Джерело: https://www.npmjs.com/package/playwright-mcp-server'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: https://www.npmjs.com/package/playwright-mcp-server
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - playwright-mcp-server

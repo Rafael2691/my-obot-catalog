@@ -1,0 +1,21 @@
+name: Mcp Gitlab
+shortDescription: GitLab MCP server for projects, merge requests, issues, pipelines,
+  wiki, releases, and more
+description: 'GitLab MCP server for projects, merge requests, issues, pipelines, wiki,
+  releases, and more
+
+
+  Джерело: git+https://github.com/zereight/gitlab-mcp.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/zereight/gitlab-mcp.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@zereight/mcp-gitlab'

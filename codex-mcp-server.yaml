@@ -1,0 +1,19 @@
+name: Codex Mcp Server
+shortDescription: MCP server wrapper for OpenAI Codex CLI
+description: 'MCP server wrapper for OpenAI Codex CLI
+
+
+  Джерело: git+https://github.com/tuannvm/codex-mcp-server.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/tuannvm/codex-mcp-server.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - codex-mcp-server

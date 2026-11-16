@@ -1,0 +1,19 @@
+name: Node Red Mcp Server
+shortDescription: Model Context Protocol (MCP) server for interacting with Node-RED
+description: 'Model Context Protocol (MCP) server for interacting with Node-RED
+
+
+  Джерело: git+https://github.com/karavaev-evgeniy/node-red-mcp-server.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/karavaev-evgeniy/node-red-mcp-server.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - node-red-mcp-server

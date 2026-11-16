@@ -1,0 +1,19 @@
+name: Sdk
+shortDescription: MCP server unit testing, end to end (e2e) testing, and server evals
+description: 'MCP server unit testing, end to end (e2e) testing, and server evals
+
+
+  Джерело: git+https://github.com/MCPJam/inspector.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/MCPJam/inspector.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@mcpjam/sdk'

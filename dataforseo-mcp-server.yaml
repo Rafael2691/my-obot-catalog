@@ -1,0 +1,21 @@
+name: Dataforseo Mcp Server
+shortDescription: CLI and MCP server for DataForSEO API — browse documentation and
+  make authenticated API requests
+description: 'CLI and MCP server for DataForSEO API — browse documentation and make
+  authenticated API requests
+
+
+  Джерело: git+https://github.com/dataforseo/mcp-server-typescript.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/dataforseo/mcp-server-typescript.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - dataforseo-mcp-server

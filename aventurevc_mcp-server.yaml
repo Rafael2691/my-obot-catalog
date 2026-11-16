@@ -1,0 +1,21 @@
+name: Mcp Server
+shortDescription: MCP server that gives AI assistants access to aVenture research
+  data on companies, people, funding, and news.
+description: 'MCP server that gives AI assistants access to aVenture research data
+  on companies, people, funding, and news.
+
+
+  Джерело: git+https://github.com/aventurevc/aventure-mcp.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/aventurevc/aventure-mcp.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@aventurevc/mcp-server'

@@ -1,0 +1,18 @@
+name: Spotify Player MCP
+shortDescription: Контроль плеєра Spotify через API
+description: 'Контроль плеєра Spotify через API
+
+
+  Джерело: https://github.com/topics/spotify-player-mcp'
+metadata:
+  categories: Media & Audio
+  icon: ''
+  repoURL: https://github.com/topics/spotify-player-mcp
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - uvx
+  - spotify-mcp

@@ -1,0 +1,21 @@
+name: Axe Mcp Server
+shortDescription: Axe DevTools accessibility analysis and remediation MCP Server for
+  AI coding agents
+description: 'Axe DevTools accessibility analysis and remediation MCP Server for AI
+  coding agents
+
+
+  Джерело: git+https://github.com/dequelabs/axe-mcp-server-public.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/dequelabs/axe-mcp-server-public.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - axe-mcp-server

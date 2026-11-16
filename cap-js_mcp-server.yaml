@@ -1,0 +1,21 @@
+name: Mcp Server
+shortDescription: Model Context Protocol (MCP) server for AI-assisted development
+  of CAP applications.
+description: 'Model Context Protocol (MCP) server for AI-assisted development of CAP
+  applications.
+
+
+  Джерело: git+https://github.com/cap-js/mcp-server.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/cap-js/mcp-server.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@cap-js/mcp-server'

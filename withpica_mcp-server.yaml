@@ -1,0 +1,21 @@
+name: Mcp Server
+shortDescription: MCP Server for withPICA — enables AI assistants to interact with
+  your withPICA music catalog
+description: 'MCP Server for withPICA — enables AI assistants to interact with your
+  withPICA music catalog
+
+
+  Джерело: https://www.npmjs.com/package/@withpica/mcp-server'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: https://www.npmjs.com/package/@withpica/mcp-server
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@withpica/mcp-server'

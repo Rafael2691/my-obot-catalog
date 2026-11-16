@@ -1,0 +1,19 @@
+name: Mware Mcp Server
+shortDescription: MCP server for mware
+description: 'MCP server for mware
+
+
+  Джерело: git+https://github.com/StitchCredit/mware-mcp-server.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/StitchCredit/mware-mcp-server.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@crscreditapi/mware-mcp-server'

@@ -1,0 +1,19 @@
+name: Mcp Figma
+shortDescription: MCP server for figma
+description: 'MCP server for figma
+
+
+  Джерело: https://www.npmjs.com/package/@thirdstrandstudio/mcp-figma'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: https://www.npmjs.com/package/@thirdstrandstudio/mcp-figma
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@thirdstrandstudio/mcp-figma'

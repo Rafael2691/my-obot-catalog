@@ -1,0 +1,19 @@
+name: Strava Mcp Server
+shortDescription: MCP server for Strava API
+description: 'MCP server for Strava API
+
+
+  Джерело: git+https://github.com/r-huijts/strava-mcp.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/r-huijts/strava-mcp.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@r-huijts/strava-mcp-server'

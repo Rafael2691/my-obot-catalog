@@ -1,0 +1,20 @@
+name: Excel Mcp Server
+shortDescription: An MCP server that reads and writes spreadsheet data to MS Excel
+  file
+description: 'An MCP server that reads and writes spreadsheet data to MS Excel file
+
+
+  Джерело: https://www.npmjs.com/package/@negokaz/excel-mcp-server'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: https://www.npmjs.com/package/@negokaz/excel-mcp-server
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@negokaz/excel-mcp-server'

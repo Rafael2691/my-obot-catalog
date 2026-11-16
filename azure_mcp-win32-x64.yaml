@@ -1,0 +1,21 @@
+name: Mcp Win32 X64
+shortDescription: Azure MCP Server - Model Context Protocol implementation for Azure,
+  for win32 on x64
+description: 'Azure MCP Server - Model Context Protocol implementation for Azure,
+  for win32 on x64
+
+
+  Джерело: git+https://github.com/microsoft/mcp.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/microsoft/mcp.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@azure/mcp-win32-x64'

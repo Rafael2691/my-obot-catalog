@@ -1,0 +1,19 @@
+name: Deepl Mcp Server
+shortDescription: MCP server for DeepL translation API
+description: 'MCP server for DeepL translation API
+
+
+  Джерело: git+https://github.com/DeepL/deepl-mcp-server.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/DeepL/deepl-mcp-server.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - deepl-mcp-server

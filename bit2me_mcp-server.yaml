@@ -1,0 +1,19 @@
+name: Mcp Server
+shortDescription: Bit2Me MCP Server
+description: 'Bit2Me MCP Server
+
+
+  Джерело: git+https://github.com/bit2me-devs/bit2me-mcp.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/bit2me-devs/bit2me-mcp.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@bit2me/mcp-server'

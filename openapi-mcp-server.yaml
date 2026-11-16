@@ -1,0 +1,19 @@
+name: Openapi Mcp Server
+shortDescription: MCP server for interacting with openapisearch.com API
+description: 'MCP server for interacting with openapisearch.com API
+
+
+  Джерело: https://www.npmjs.com/package/openapi-mcp-server'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: https://www.npmjs.com/package/openapi-mcp-server
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - openapi-mcp-server

@@ -1,0 +1,20 @@
+name: Mcp Docs Server
+shortDescription: MCP server for accessing Mastra.ai documentation, changelogs, and
+  news.
+description: 'MCP server for accessing Mastra.ai documentation, changelogs, and news.
+
+
+  Джерело: git+https://github.com/mastra-ai/mastra.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/mastra-ai/mastra.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@mastra/mcp-docs-server'

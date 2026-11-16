@@ -1,0 +1,19 @@
+name: Redmine Mcp Server
+shortDescription: MCP server for Redmine
+description: 'MCP server for Redmine
+
+
+  Джерело: git+https://github.com/onozaty/redmine-mcp-server.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/onozaty/redmine-mcp-server.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@onozaty/redmine-mcp-server'

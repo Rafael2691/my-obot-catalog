@@ -1,0 +1,19 @@
+name: Mcp Server Trello
+shortDescription: An MCP server for Trello boards, powered by Bun for maximum performance.
+description: 'An MCP server for Trello boards, powered by Bun for maximum performance.
+
+
+  Джерело: git+https://github.com/delorenj/mcp-server-trello.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/delorenj/mcp-server-trello.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@delorenj/mcp-server-trello'

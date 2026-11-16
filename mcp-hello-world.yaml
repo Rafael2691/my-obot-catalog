@@ -1,0 +1,19 @@
+name: Mcp Hello World
+shortDescription: A simple Hello World MCP server
+description: 'A simple Hello World MCP server
+
+
+  Джерело: git+https://github.com/lobehub/mcp-hello-world.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/lobehub/mcp-hello-world.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - mcp-hello-world

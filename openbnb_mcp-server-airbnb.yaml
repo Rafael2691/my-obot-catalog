@@ -1,0 +1,19 @@
+name: Mcp Server Airbnb
+shortDescription: MCP server for Airbnb search and listing details
+description: 'MCP server for Airbnb search and listing details
+
+
+  Джерело: https://www.npmjs.com/package/@openbnb/mcp-server-airbnb'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: https://www.npmjs.com/package/@openbnb/mcp-server-airbnb
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@openbnb/mcp-server-airbnb'

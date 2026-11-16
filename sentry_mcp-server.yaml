@@ -1,0 +1,21 @@
+name: Mcp Server
+shortDescription: 'Sentry MCP server over stdio: the CLI''s `sentry mcp` server, bundled
+  without the rest of the CLI'
+description: 'Sentry MCP server over stdio: the CLI''s `sentry mcp` server, bundled
+  without the rest of the CLI
+
+
+  Джерело: git+https://github.com/getsentry/toolkit.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/getsentry/toolkit.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@sentry/mcp-server'

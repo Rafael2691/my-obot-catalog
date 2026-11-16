@@ -1,0 +1,19 @@
+name: Mcp Server Inventory
+shortDescription: Transcend MCP Server — Data Inventory tools.
+description: 'Transcend MCP Server — Data Inventory tools.
+
+
+  Джерело: git+https://github.com/transcend-io/tools.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/transcend-io/tools.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@transcend-io/mcp-server-inventory'

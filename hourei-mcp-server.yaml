@@ -1,0 +1,19 @@
+name: Hourei Mcp Server
+shortDescription: MCP server for Japanese law information using e-Gov API
+description: 'MCP server for Japanese law information using e-Gov API
+
+
+  Джерело: git+https://github.com/groundcobra009/hourei-mcp-server.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/groundcobra009/hourei-mcp-server.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - hourei-mcp-server

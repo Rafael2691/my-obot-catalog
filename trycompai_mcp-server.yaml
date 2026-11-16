@@ -1,0 +1,21 @@
+name: Mcp Server
+shortDescription: Model Context Protocol (MCP) Server for the *@trycompai/mcp-server*
+  API.
+description: 'Model Context Protocol (MCP) Server for the *@trycompai/mcp-server*
+  API.
+
+
+  Джерело: git+https://github.com/trycompai/comp-v2.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/trycompai/comp-v2.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@trycompai/mcp-server'

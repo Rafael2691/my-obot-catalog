@@ -1,0 +1,19 @@
+name: Mcp Server Apple Shortcuts
+shortDescription: MCP server for automation using Apple Shortcuts
+description: 'MCP server for automation using Apple Shortcuts
+
+
+  Джерело: https://www.npmjs.com/package/mcp-server-apple-shortcuts'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: https://www.npmjs.com/package/mcp-server-apple-shortcuts
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - mcp-server-apple-shortcuts

@@ -1,0 +1,19 @@
+name: Replicate Mcp
+shortDescription: Official MCP server for Replicate's HTTP API
+description: 'Official MCP server for Replicate''s HTTP API
+
+
+  Джерело: git+https://github.com/replicate/replicate-typescript-stainless.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/replicate/replicate-typescript-stainless.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - replicate-mcp

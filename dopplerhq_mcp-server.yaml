@@ -1,0 +1,20 @@
+name: Mcp Server
+shortDescription: MCP server for Doppler API with auto-generated tools from OpenAPI
+  specification
+description: 'MCP server for Doppler API with auto-generated tools from OpenAPI specification
+
+
+  Джерело: git+https://github.com/DopplerHQ/mcp-server.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/DopplerHQ/mcp-server.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@dopplerhq/mcp-server'

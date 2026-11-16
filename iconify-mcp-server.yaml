@@ -1,0 +1,19 @@
+name: Iconify Mcp Server
+shortDescription: MCP server for Iconify
+description: 'MCP server for Iconify
+
+
+  Джерело: git+https://github.com/imjac0b/iconify-mcp-server.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/imjac0b/iconify-mcp-server.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - iconify-mcp-server

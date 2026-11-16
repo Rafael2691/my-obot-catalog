@@ -1,0 +1,19 @@
+name: Redash Mcp
+shortDescription: MCP server for Redash integration
+description: 'MCP server for Redash integration
+
+
+  Джерело: git+https://github.com/suthio/redash-mcp.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/suthio/redash-mcp.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@suthio/redash-mcp'

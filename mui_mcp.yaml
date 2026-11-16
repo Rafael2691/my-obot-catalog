@@ -1,0 +1,19 @@
+name: Mcp
+shortDescription: MUI MCP Server
+description: 'MUI MCP Server
+
+
+  Джерело: git+https://github.com/mui/mui-x.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/mui/mui-x.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@mui/mcp'

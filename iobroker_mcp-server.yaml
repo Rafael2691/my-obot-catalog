@@ -1,0 +1,19 @@
+name: Mcp Server
+shortDescription: MCP server for ioBroker
+description: 'MCP server for ioBroker
+
+
+  Джерело: git+https://github.com/ioBroker/mcp-package.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/ioBroker/mcp-package.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@iobroker/mcp-server'

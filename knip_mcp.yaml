@@ -1,0 +1,19 @@
+name: Mcp
+shortDescription: Knip MCP Server
+description: 'Knip MCP Server
+
+
+  Джерело: git+https://github.com/webpro-nl/knip.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/webpro-nl/knip.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@knip/mcp'

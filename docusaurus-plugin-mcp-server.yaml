@@ -1,0 +1,21 @@
+name: Docusaurus Plugin Mcp Server
+shortDescription: A Docusaurus plugin that exposes an MCP server endpoint for AI agents
+  to search and retrieve documentation
+description: 'A Docusaurus plugin that exposes an MCP server endpoint for AI agents
+  to search and retrieve documentation
+
+
+  Джерело: git+https://github.com/scalvert/docusaurus-plugin-mcp-server.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/scalvert/docusaurus-plugin-mcp-server.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - docusaurus-plugin-mcp-server

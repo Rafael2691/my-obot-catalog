@@ -1,0 +1,19 @@
+name: Scryfall Mcp Server
+shortDescription: MCP server for interacting with the Scryfall MTG API
+description: 'MCP server for interacting with the Scryfall MTG API
+
+
+  Джерело: https://www.npmjs.com/package/scryfall-mcp-server'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: https://www.npmjs.com/package/scryfall-mcp-server
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - scryfall-mcp-server

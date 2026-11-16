@@ -1,0 +1,19 @@
+name: Mcp
+shortDescription: TinyCloud delegated operations MCP server
+description: 'TinyCloud delegated operations MCP server
+
+
+  Джерело: git+https://github.com/TinyCloudLabs/js-sdk.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/TinyCloudLabs/js-sdk.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@tinycloud/mcp'

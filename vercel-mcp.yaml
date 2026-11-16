@@ -1,0 +1,19 @@
+name: Vercel Mcp
+shortDescription: An MCP server that connects to Vercel API
+description: 'An MCP server that connects to Vercel API
+
+
+  Джерело: git+https://github.com/zueai/vercel-api-mcp.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/zueai/vercel-api-mcp.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - vercel-mcp

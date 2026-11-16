@@ -1,0 +1,19 @@
+name: Doit Mcp Server
+shortDescription: DoiT official MCP Server
+description: 'DoiT official MCP Server
+
+
+  Джерело: git+https://github.com/doitintl/doit-mcp-server.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/doitintl/doit-mcp-server.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@doitintl/doit-mcp-server'

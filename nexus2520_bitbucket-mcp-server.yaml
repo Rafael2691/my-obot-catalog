@@ -1,0 +1,20 @@
+name: Bitbucket Mcp Server
+shortDescription: MCP server for Bitbucket API integration - supports both Cloud and
+  Server
+description: 'MCP server for Bitbucket API integration - supports both Cloud and Server
+
+
+  Джерело: git+https://github.com/pdogra1299/bitbucket-mcp-server.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/pdogra1299/bitbucket-mcp-server.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@nexus2520/bitbucket-mcp-server'

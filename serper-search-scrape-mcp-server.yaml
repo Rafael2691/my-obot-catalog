@@ -1,0 +1,19 @@
+name: Serper Search Scrape Mcp Server
+shortDescription: Serper MCP Server supporting search and webpage scraping
+description: 'Serper MCP Server supporting search and webpage scraping
+
+
+  Джерело: git+https://github.com/marcopesani/mcp-server-serper.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/marcopesani/mcp-server-serper.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - serper-search-scrape-mcp-server

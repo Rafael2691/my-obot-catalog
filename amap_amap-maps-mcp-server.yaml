@@ -1,0 +1,19 @@
+name: Amap Maps Mcp Server
+shortDescription: MCP server for using the AMap Maps API
+description: 'MCP server for using the AMap Maps API
+
+
+  Джерело: https://www.npmjs.com/package/@amap/amap-maps-mcp-server'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: https://www.npmjs.com/package/@amap/amap-maps-mcp-server
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@amap/amap-maps-mcp-server'

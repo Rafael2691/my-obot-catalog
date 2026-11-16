@@ -1,0 +1,19 @@
+name: Mcp Server
+shortDescription: Contentful MCP Server - Model Context Protocol server for Contentful
+description: 'Contentful MCP Server - Model Context Protocol server for Contentful
+
+
+  Джерело: git+https://github.com/contentful/contentful-mcp-server.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+https://github.com/contentful/contentful-mcp-server.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@contentful/mcp-server'

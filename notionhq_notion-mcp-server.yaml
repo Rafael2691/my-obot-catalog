@@ -1,0 +1,19 @@
+name: Notion Mcp Server
+shortDescription: Official MCP server for Notion API
+description: 'Official MCP server for Notion API
+
+
+  Джерело: git+ssh://git@github.com/makenotion/notion-mcp-server.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: git+ssh://git@github.com/makenotion/notion-mcp-server.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@notionhq/notion-mcp-server'

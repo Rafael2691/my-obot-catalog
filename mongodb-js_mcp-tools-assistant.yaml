@@ -1,0 +1,19 @@
+name: Mcp Tools Assistant
+shortDescription: Assistant tools for the MongoDB MCP server
+description: 'Assistant tools for the MongoDB MCP server
+
+
+  Джерело: https://github.com/mongodb-js/mongodb-mcp-server.git'
+metadata:
+  categories: Tools
+  icon: ''
+  repoURL: https://github.com/mongodb-js/mongodb-mcp-server.git
+runtime: containerized
+containerizedConfig:
+  image: ghcr.io/obot-platform/mcp-images/stdio-wrapper:latest
+  port: 8099
+  path: /
+  args:
+  - npx
+  - -y
+  - '@mongodb-js/mcp-tools-assistant'
